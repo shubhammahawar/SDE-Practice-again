@@ -4,7 +4,7 @@ using namespace std;
 typedef long long int lli;
 
 
-/* Implement Stack using single queue.
+/* Implement Stack using two queue.
 
 T.C = O(N)
 S.C ~= O(N) //since using 2 queue so 2N so nearly ~
@@ -14,9 +14,7 @@ Analysis - we will be using two queue and everytime
            popping  element by element from q1 to q2
            and then swapping Q1 and Q2.
 
-
-
-           */
+       */
 
 void push(lli ele,queue<lli>&q1,queue<lli>&q2,lli &cnt,lli n)
 {
