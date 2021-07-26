@@ -19,7 +19,7 @@ Analysis - we will be using single queue and till
 
 void push(lli ele,queue<lli>&q1,lli &cnt,lli n)
 {
-	if(cnt==n)
+	 if(cnt==n)
 	{
 		cout<<"Data structure is Full\n";
 		return;
