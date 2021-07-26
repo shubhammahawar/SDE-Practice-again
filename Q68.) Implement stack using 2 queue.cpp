@@ -19,7 +19,7 @@ Analysis - we will be using two queue and everytime
 
 void push(lli ele,queue<lli>&q1,queue<lli>&q2,lli &cnt,lli n)
 {
-	if(cnt==n)
+	 if(cnt==n)
 	{
 		cout<<"Data structure is Full\n";
 		return;
