@@ -1,0 +1,100 @@
+
+#include<bits/stdc++.h>
+
+using namespace std;
+typedef long long int lli;
+
+
+// Preorder Traversal
+
+class Solution {
+    
+    void preTrav(TreeNode*root,vector<int>&arr)
+    {
+        if(root==NULL)
+            return;
+        
+        arr.push_back(root->val);
+        preTrav(root->left,arr);
+        preTrav(root->right,arr);
+        
+        
+    }
+    
+public:
+    vector<int> preorderTraversal(TreeNode* root) {
+        
+        vector<int>arr;
+        
+        preTrav(root,arr);
+        
+        return arr;
+        
+    }
+};
+
+
+// INorder Traversal--------------------
+
+class Solution {
+    
+    void inTrav(TreeNode* root,vector<int>&arr)
+    {
+        if(root==NULL)
+            return;
+        
+        inTrav(root->left,arr);
+        arr.push_back(root->val);
+        inTrav(root->right,arr);
+        
+        
+    }
+       
+    
+public:
+    vector<int> inorderTraversal(TreeNode* root) {
+        vector<int>arr;
+        
+        
+        inTrav(root,arr);
+        
+        return arr;
+        
+    }
+};
+
+
+// POSTORDER TRAVERSAL---------------------------
+
+class Solution {
+    
+         void postTrav(TreeNode* root,vector<int>&arr)
+    {
+        if(root==NULL)
+            return;
+        
+        postTrav(root->left,arr);
+        postTrav(root->right,arr);
+         arr.push_back(root->val);
+        
+        
+    }
+    
+    
+public:
+    vector<int> postorderTraversal(TreeNode* root) {
+        
+        
+    vector<int>arr;
+    postTrav(root,arr);
+        
+        return arr;
+        
+        
+    }
+};
+
+--------------------
+
+
+
