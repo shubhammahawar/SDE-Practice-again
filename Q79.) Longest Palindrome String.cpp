@@ -47,7 +47,7 @@ void LongestPalindrome(string str)
 		}
 
 		low=i-1;
-		high=low+1;
+		high=i+1;
 
 		while(low>=0 && high<l && str[low]==str[high])
 		{
